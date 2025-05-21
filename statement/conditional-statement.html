@@ -33,6 +33,104 @@
       } else {
         console.log("a is b");
       }
+      // switch-case(jodi akana break use na kori tahola sob gulo option show korba)
+      let g = 1;
+      switch (g) {
+        case 0:
+          document.write("light on");
+          break;
+        case 1:
+          document.write("light off");
+          break;
+        default:
+          document.write("undefine value");
+      }
+      // // toUpperCase use kora(akana case a obossoi capital letter use korta hba.ami jkn prompt a capital letter use na krbo tkn sata convart kora automatically result dkaba)
+      // let jh = prompt("Enter Your Letter");
+      // let i = jh.toUpperCase();
+      // switch (i) {
+      //   case "A":
+      //     document.write("v");
+      //     break;
+      //   case "E":
+      //     document.write("v");
+      //     break;
+      //   case "I":
+      //     document.write("v");
+      //     break;
+      //   case "O":
+      //     document.write("v");
+      //     break;
+      //   case "U":
+      //     document.write("v");
+      //     break;
+
+      //   default:
+      //     document.write("Consonant");
+      // }
+
+      // let j = prompt("Enter Your Letter");
+      // // let k = j.toLowerCase();
+      // switch (j) {
+      //   case "a":
+      //     document.write("v");
+      //     break;
+      //   case "e":
+      //     document.write("v");
+      //     break;
+      //   case "i":
+      //     document.write("v");
+      //     break;
+      //   case "o":
+      //     document.write("v");
+      //     break;
+      //   case "u":
+      //     document.write("v");
+      //     break;
+
+      //   default:
+      //     document.write("Consonant");
+      // }
+      // normal way(prompt ,tolowercase use na kora....let x a ami jkono man use korta pri)
+      let x = "o";
+
+      switch (x) {
+        case "a":
+          document.write("v");
+          break;
+        case "e":
+          document.write("v1");
+          break;
+        case "i":
+          document.write("v2");
+          break;
+        case "o":
+          document.write("v3");
+          break;
+        case "u":
+          document.write("v4");
+          break;
+
+        default:
+          document.write("Consonant");
+      }
+
+      // grade point with switch
+
+      var point = prompt("Inter your result");
+      switch (true) {
+        case point >= 90 && point <= 100:
+          document.write("A");
+          break;
+        case point >= 80 && point <= 89:
+          document.write("B");
+          break;
+        case point >= 70 && point <= 79:
+          document.write("C");
+          break;
+        default:
+          document.write("Fail");
+      }
     </script>
   </body>
 </html>

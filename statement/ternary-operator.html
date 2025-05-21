@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   normal way(ternary-operator)
+      const d = 30 > 4 ? "yes" : "no";
+      document.write(d);
+      document.write("<br>");
+
+      //   //   prompt deya (ternary-operator)
+      //   const a = prompt("write your value");
+      //   const e = a > 4 ? "yes" : "no";
+      //   document.write(e);
+
+      let num = 10;
+      if (num % 2 === 0) {
+        document.write("the number is even.");
+      } else {
+        document.write("this number is odd.");
+      }
+
+      document.write("<br>");
+
+      // prompt use kora
+      let c = prompt("write your value");
+
+      if (c % 2 == 0) {
+        document.write("the number is even.");
+      } else {
+        document.write("this number is odd.");
+      }
+      //   ternary-operator deya
+      const w = 10 % 2 ? "the number is even." : "the number is odd.";
+      console.log(w);
+    </script>
+  </body>
+</html>
