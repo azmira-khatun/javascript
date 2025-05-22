@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // question-1
+      let a = parseFloat(prompt("Enter your value"));
+      let b = parseFloat(prompt("Enter your value"));
+      let c = parseFloat(prompt("Enter your value"));
+
+      if (a > b && a > c) {
+        document.write("The largest nmbr is" + " " + a);
+      } else if (b > a && b > c) {
+        document.write("The  second largest nmbr is" + " " + b);
+      } else {
+        document.write("Otherwise" + c);
+      }
+      var x = parseInt(prompt("enter a number"));
+      var y = parseInt(prompt("enter a number"));
+
+      var z = parseInt(prompt("enter a number"));
+      if (x > y) {
+        temp = a;
+        a = b;
+        b = temp;
+      }
+      if (x > z) {
+        temp = z;
+        z = x;
+        x = temp;
+      }
+      if (y > z) {
+        temp = y;
+        y = z;
+        z = temp;
+      }
+    </script>
+  </body>
+</html>
