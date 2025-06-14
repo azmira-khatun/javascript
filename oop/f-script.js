@@ -6,7 +6,7 @@ function f_window() {
   var address = document.f.address.value;
   var session = document.f.session.value;
   var gender = "";
-  var subjects = [];
+  var subjects = "";
 
   for (let i = 0; i < document.f.gen.length; i++) {
     if (document.f.gen[i].checked) {
@@ -16,15 +16,11 @@ function f_window() {
 
   for (let j = 0; j < document.f.sub.length; j++) {
     if (document.f.sub[j].checked) {
-      subjects.push(document.f.sub[j].value);
+      subjects += document.f.sub[j].value + " ";
     }
   }
 
-  let popup = window.open(
-    "",
-    "popupWindow",
-    "width=400,height=400,left=300,top=200,resizable=yes"
-  );
+  let popup = open("", "", "width=400,height=400");
 
   with (popup.document) {
     write("<html><head><title>" + title + "</title></head>");
@@ -38,7 +34,7 @@ function f_window() {
     write("Address: " + address + "<br/>" + "<br/>");
     write("Session: " + session + "<br/>" + "<br/>");
     write("Gender: " + gender + "<br/>" + "<br/>");
-    write("Subjects: " + subjects.join(", ") + "<br/>" + "<br/>");
+    write("Subjects: " + subjects + "<br/>" + "<br/>");
     write(
       "<br/><input type='button' value='Close me' onclick='self.close();' />" +
         "&nbsp"
