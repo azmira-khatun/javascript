@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping List</title>
+</head>
+<body>
+  <h2>Shopping List</h2>
+  <input type="text" id="itemInput" placeholder="Enter item">
+  <button onclick="addItem()">Add</button>
+
+  <ul id="itemList"></ul>
+
+  <script>
+    const items = []; // Array to store items
+
+    function addItem() {
+      const input = document.getElementById("itemInput");
+      const item = input.value.trim();
+
+      if (item !== "") {
+        items.push(item); // Add to array
+        input.value = ""; // Clear input
+        showItems();      // Display updated list
+      }
+    }
+
+
+
+    function showItems() {
+      const list = document.getElementById("itemList");
+      list.innerHTML = ""; // Clear current list
+
+      items.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.innerText = `${index + 1}. ${item}`;
+        list.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
