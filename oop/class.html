@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Cource {
+        constructor(cname, cage, cphone) {
+          (this.name = cname), (this.age = cage), (this.phone = cphone);
+        }
+        show() {
+          document.write(
+            "My name is " + this.name + " and my nage is " + this.age
+          );
+        }
+      }
+
+      const wdpf = new Cource("Azmira", 25, 65432);
+      const wdpf1 = new Cource("mira", 25, 432);
+
+      wdpf.show();
+      document.write("<br>");
+      wdpf1.show();
+    </script>
+  </body>
+</html>

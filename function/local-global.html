@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // local function
+      function myfunction() {
+        let a = 5;
+        let b = 3;
+        return a * b;
+      }
+      document.write(myfunction());
+      document.write("<br>");
+
+      //   global function
+      let a = 5;
+      let b = 3;
+      function sub() {
+        return a * b;
+      }
+      document.write(sub());
+      document.write("<br>");
+
+      function tu() {
+        return a - b;
+      }
+      document.write(tu());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Student {
+        constructor(name, id, email, phone) {
+          (this.name = name),
+            (this.id = id),
+            (this.phone = phone),
+            (this.email = email);
+        }
+        allow() {
+          document.write(
+            "My name is " +
+              this.name +
+              " and my id is " +
+              this.id +
+              "my email is" +
+              this.email +
+              "my phone number is" +
+              this.phone
+          );
+        }
+      }
+
+      const idb = new Student("Azmira", 25555, "azmiragrn@gmail.com", 65432);
+      const idb2 = new Student("mira", 25555, "shohanigrn@gmail.com", 65432);
+      const idb3 = new Student(
+        "Tasnim",
+        25555,
+        "nishattasnim@gmail.com",
+        65432
+      );
+      const idb4 = new Student("Azmira", 25555, "miragrn@gmail.com", 65432);
+
+      const idb5 = new Student("mira", 2765, "Farhana@gmail.com", 432);
+
+      idb.allow();
+      document.write("<br>");
+      idb1.allow();
+      document.write("<br>");
+      idb2.allow();
+      document.write("<br>");
+      idb3.allow();
+      document.write("<br>");
+      idb4.allow();
+    </script>
+  </body>
+</html>

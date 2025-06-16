@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-FORM</title>
+    <style> 
+       div{
+    background-color: bisque;
+    width: 400px;
+    height: 440px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 20px auto;
+  }
+    </style>
+</head>
+<body>
+
+   <div>
+        
+        <form name="f"> 
+            ID: <br>
+            <input type="text" name="fID" placeholder="Enter your ID"> <br><br>
+            Name: <br>
+            <input type="text" name="fName" placeholder="Enter your name"> <br><br>
+            Address: <br>
+            <textarea name="fAddress"  placeholder="Enter your address"></textarea> <br><br>
+            Round: <br>
+            <select name="fRound">
+                <option>65</option>
+                <option>64</option>
+                <option>63</option>
+            </select>
+            <br><br>
+            Gender: <br>
+            <input type="radio"  name="fg" value="Male">Male
+            <input type="radio"  name="fg" value="Female">Female
+            <input type="radio" name="fg"  value="Others">Others
+            <br><br>
+            Education: <br>
+            <input type="checkbox" name="fEdu" value="SSC">SSC
+            <input type="checkbox" name="fEdu" value="HSC">HSC 
+            <input  type="checkbox" name="fEdu" value="BBA">BBA <br><br>
+
+            <input name="fEdu" type="submit" onclick="myForm()" value="Submit">
+            <input type="reset" name="fEdu"  value="Reset">
+        </form>
+    </fieldset>
+    </div>
+    <script> 
+        function myForm () {
+            let id = document.f.fID.value;
+            let n = document.f.fName.value;
+            let a = document.f.fAddress.value;
+            let r = document.f.fRound.value;
+            let gender = "";
+            let chkEdu = "";
+
+            for (i=0;i<document.f.fg.length;i++) {
+                if (document.f.fg[i].checked) {
+                    gender = document.f.fg[i].value;
+                }
+            }
+            
+            for (let j=0; j<document.f.fEdu.length;j++) {
+                if (document.f.fEdu[j].checked) {
+                    chkEdu+=document.f.fEdu[j].value+", ";
+                }
+            }
+
+            let p = open("", "", "width=500, height=600");
+
+            with(p.document){
+            write("ID: "+id+"<br>");
+            write("Name: "+n+"<br>");
+            write("Address: "+a+"<br>");
+            write("Round: "+r+"<br>");
+            write("Gender: "+gender+"<br>");
+            write("Education: "+chkEdu+"<br>");
+            write("<input type='button' value='Close me' onclick='self.close();' />");
+            write("<input type='button' value='Print' onclick='self.print();' />");
+          }
+
+        }
+    </script>
+</body>
+</html>

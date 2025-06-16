@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // constructor object function for person
+      //   function Person(f, a, e) {
+      //     this.name = f;
+      //     this.age = a;
+      //     this.id = e;
+      //   }
+      //   const a = new Person("ayan", 4, 8976);
+      //   const b = new Person("mira", 24, 87);
+      //   const c = new Person("mukta", 34, 87);
+      //   console.log(a);
+      //   console.log(b);
+      //   console.log(c);
+
+      //   document.write(a.name + " " + b.name + " " + c.name);
+
+      //   document.write("<br>");
+      //   document.write(
+      //     "name:" +
+      //       a.name +
+      //       "<br>" +
+      //       " " +
+      //       "age:" +
+      //       a.age +
+      //       " " +
+      //       "id :" +
+      //       " " +
+      //       a.id
+      //   );
+
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.info = function () {
+          document.write(
+            "Hello, My name is" + " " + this.name + " " + this.age
+          );
+        };
+      }
+
+      let person1 = new Person("Tomato", 32);
+      let person2 = new Person("Banana", 12);
+      let person3 = new Person("Orange", 45);
+      person2.info();
+    </script>
+  </body>
+</html>
