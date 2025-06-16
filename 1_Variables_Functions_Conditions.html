@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greeting App</title>
+</head>
+<body>
+  <h2>Greeting App</h2>
+  <input type="text" id="username" placeholder="Enter your name">
+  <button onclick="greetUser()">Greet</button>
+  <p id="greeting"></p>
+
+  <script>
+    function greetUser() {
+      const name = document.getElementById("username").value;
+
+      // var a="azmira";
+      // var b="";
+
+      // if(a != ""){
+      //   true;
+      // }
+      // if (a==""){
+      //   false;
+      // }
+      // if(b==""){
+      //   true;
+      // }
+      // if(b!=""){
+      //   false;
+      // }
+
+      if (name.trim() != "") {
+        document.getElementById("greeting").innerText = "Hello, " + name + "!";
+      } else {
+        document.getElementById("greeting").innerText = "Please enter your name.";
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+

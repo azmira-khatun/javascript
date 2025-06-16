@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "amin",
+        lastName: [],
+        id: 28,
+        // getName: function () {
+        //   return this.firstName + " " + this.lastName;
+        // },
+
+        getShow: function () {
+            console.log(this.lastName);
+        },
+        setData: function (lastName) {
+          this.lastName.push(lastName);
+        },
+      };
+      person.setData("Ahmed");
+      person.setData("Khan");
+      person.setData("Rafia");
+      person.setData("Ayan");
+
+      person.getShow();
+    </script>
+  </body>
+</html>
