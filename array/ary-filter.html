@@ -8,10 +8,13 @@
   <body>
     <script>
       const ages = [32, 33, 16, 40];
-      document.write(filter(checkAdult));
-      function checkAdult(age) {
-        return age >= 18;
-      }
+      const filteredNumbers = ages.filter(function(number) {
+  return number > 20;
+})
+document.write( filteredNumbers);
+
+
+      
     </script>
   </body>
 </html>
