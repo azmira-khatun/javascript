@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        background-color: #508c94;
+        width: 400px;
+        height: 400px;
+        padding: 10px;
+        margin: 20px auto;
+        border-radius: 10px;
+        font-weight: bold;
+      "
+    >
+    <fieldset>
+      <legend style="text-align: center;">MY REGISTRATION FORM</legend>
+      <form id="form1">
+        Name:<br />
+        <input
+          type="text"
+          name="fn"
+          placeholder=" please enter your name"
+        /><br /><br />
+        Id:<br />
+        <input
+          type="number"
+          name="id"
+          placeholder="please enter your id"
+        /><br /><br />
+        Gmail:<br />
+        <input
+          type="gmail"
+          name="gmail"
+          placeholder="please enter your gmail"
+        /><br /><br />
+        Round:<br />
+        <select name="round">
+          <option>56</option>
+          <option>67</option>
+          <option>34</option></select
+        ><br /><br />
+        Gender:<br />
+        <input type="radio" name="gt" value="Male" />Male
+        <input type="radio" name="gt" value="Female" />Female<br /><br />
+        Subject:<br />
+        <input type="checkbox" name="sbj" value="Math" />Math
+        <input type="checkbox" name="sbj" value="English" />English
+        <input type="checkbox" name="sbj" value="Bangla" />Bangla<br /><br />
+        <input
+          style="background-color: crimson"
+          ;
+          type="submit"
+          value="Submit"
+        />
+      </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  class FormValues {
+    constructor(formdata) {
+      for (let [name, value] of formdata) {
+        this[name] = formdata.getAll(name).join(",");
+      }
+    }
+
+    getData() {
+      var result = "Name: " + this.fn + "<br>";
+      result += "Id: " + this.id + "<br>";
+      result += "Gmail: " + this.gmail + "<br>";
+      result += "Round: " + this.round + "<br>";
+      result += "Gender: " + this.gt + "<br>";
+      result += "Subject: " + this.sbj + "<br>";
+      var win = window.open("", "", "height=350,width=350");
+      win.document.write(result);
+    }
+  }
+
+  form1.onsubmit = async (e) => {
+    e.preventDefault();
+    const fm = document.getElementById("form1");
+    const form_data = new FormData(fm);
+    const f = new FormValues(form_data);
+    f.getData();
+  };
+</script>
